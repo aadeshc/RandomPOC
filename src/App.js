@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ClickCounter from './ClickCounter'
+import Hover from './HoverCounter'
+import HoverCounter from './HoverCounter';
+import ChildComponent from './ChildComponent'
+const PrintName = (name) => {
+  alert("Hi" + name)
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClickCounter name="Aadesh" />
+      <HoverCounter />
+      <ChildComponent name={PrintName} />
     </div>
   );
 }
